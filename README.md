@@ -7,7 +7,7 @@ This contains some hacks we use in the aegir project. Don't be like us. Don't ha
 --------------------------------------------
 
 The pack module for 6.x-1.x (1.9) doesn't appear to work correctly with SSL. 
-Mmy observed problem with pack is that the SSL bits don't seem to be being set correctly. 
+My observed problem with pack is that the SSL bits don't seem to be being set correctly. 
 This results in the 443 vhost block getting skipped (do to conditionals in the ssl 
 vhost.tpl.php template). My guess is this has something to do with the way Aegir maps 
 SSL certificates to IPs and the fact that all the slaves in a pack have a different ip.
