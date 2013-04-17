@@ -1,4 +1,4 @@
-<VirtualHost *:443>
+<VirtualHost <?php print gethostbyname($this->uri) ?>:443>
 
   <?php if ($this->site_mail) : ?>
     ServerAdmin <?php  print $this->site_mail; ?>
