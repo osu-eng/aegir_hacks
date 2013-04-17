@@ -27,9 +27,9 @@
     SSLEngine on
 
     # Configure the global cert/chain/key
-    SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+    SSLCertificateFile      /etc/httpd/conf/public.cert
     SSLCertificateChainFile /etc/httpd/conf/ca-chain.cert
-    SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+    SSLCertificateKeyFile   /etc/httpd/conf/private.key
 
   <?php
   if (sizeof($this->aliases)) {
