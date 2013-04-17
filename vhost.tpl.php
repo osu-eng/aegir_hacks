@@ -1,5 +1,5 @@
 <VirtualHost *:443>
-  
+
   <?php if ($this->site_mail) : ?>
     ServerAdmin <?php  print $this->site_mail; ?>
   <?php endif;?>
@@ -9,11 +9,18 @@
     ServerName <?php print $this->uri; ?>
 
     # Variables for Aegir settings.php
+    # For some reason these need spaced out
+
     SetEnv db_type  <?php print urlencode($db_type); ?>
+
     SetEnv db_name  <?php print urlencode($db_name); ?>
+
     SetEnv db_user  <?php print urlencode($db_user); ?>
+
     SetEnv db_passwd  <?php print urlencode($db_passwd); ?>
+
     SetEnv db_host  <?php print urlencode($db_host); ?>
+
     SetEnv db_port  <?php print urlencode($db_port); ?>
 
     # Enable SSL handling.
@@ -68,11 +75,18 @@
   ServerName <?php print $this->uri; ?>
 
   # Aegir environment variables for settings.php
+  # For some reason these need spaced out
+
   SetEnv db_type  <?php print urlencode($db_type); ?>
+
   SetEnv db_name  <?php print urlencode($db_name); ?>
+
   SetEnv db_user  <?php print urlencode($db_user); ?>
+
   SetEnv db_passwd  <?php print urlencode($db_passwd); ?>
+
   SetEnv db_host  <?php print urlencode($db_host); ?>
+
   SetEnv db_port  <?php print urlencode($db_port); ?>
 
 <?php
@@ -118,4 +132,4 @@ if ($this->redirection || $ssl_redirection) {
     </DirectoryMatch>
 
 
-</VirtualHost>    
+</VirtualHost>
